@@ -12,8 +12,8 @@ Bash Shell에 대한 자세한 내용은 김은지 Evangelist님의 글을 참�
 시스템 요구사항의 경우 작년 Windows Anniversary Update 버전이지만 저는 Windows Creator Update를 먼저 수행한 후에 진행하였습니다. 따라서 이 문서의 내용은 Windows Creator Update를 설치한 후에 진행한 내용인 것을 참고하시기 바랍니다.
 
 이 문서의 내용은 아래의 순서로 진행됩니다.
-1. [Bash 활성화](#1)
-2. [apt-get 서버 변경](#2)
+1. [Bash 활성화](#1-bash-활성화)
+2. [apt-get 서버 변경](#2-apt-get-서버-변경)
 
 ## 1. Bash 활성화
 ----------------
