@@ -12,8 +12,8 @@ Bash Shell에 대한 자세한 내용은 김은지 Evangelist님의 글을 참�
 시스템 요구사항의 경우 작년 Windows Anniversary Update 버전이지만 저는 Windows Creator Update를 먼저 수행한 후에 진행하였습니다. 따라서 이 문서의 내용은 Windows Creator Update를 설치한 후에 진행한 내용인 것을 참고하시기 바랍니다.
 
 이 문서의 내용은 아래의 순서로 진행됩니다.
-1. [Bash 활성화](#1-bash-활성화)
-2. [apt-get 서버 변경](#2-apt-get-서버-변경)
+[1. Bash 활성화](#1-bash-활성화)
+[2. apt-get 서버 변경](#2-apt-get-서버-변경)
 
 ## 1. Bash 활성화
 ----------------
@@ -21,10 +21,14 @@ Bash를 동작시키기 위해서는 두가지 작업이 필요합니다.
 
 ### 1-1. 개발자 모드로 변경
 윈도우의 **설정 > 업데이트 및 복구 > 개발자용**으로 화면을 이동하여 개발자 기능 사용의 개발자 모드를 선택합니다.
+
+
 ![개발자 모드 선택 이미지](./resources/developer-mode.png)
 
 ### 1-2. WSL(Windows Subsystem for Linux) 기능 활성화
 윈도우의 **설정 > 앱 > 프로그램 및 기능 > Windows 기능 켜기/끄기**로 화면을 이동하여 Linux용 Windows 하위 시스템(베타) 기능을 체크합니다.
+
+
 ![Windows Subsystem for Linux 기능 체크](./resources/windows-feature.png)
 
 재부팅을 합니다.
@@ -109,5 +113,13 @@ Bash는 윈도우에서 cmd나 powershell을 이용하듯 명령어만 우분투
 cmd
 cmd.exe
 ```
+
+## 현재까지 찾은 문제점
+윈도우 프로그램에서는 /mnt/ 아래 폴더부터 접근할 수 있습니다. 예를 들면 아래 명령들은 올바른 경로에 접근하지 못합니다.
+```shell
+code ~/.gitconfig
+code /etc/apt/sources.list
+```
+이는 Bash에서 윈도우에 접근할 수는 있지만 윈도우에서 Bash 쉘 안의 경로에 접근할 수 없기 때문에 발생하는 문제입니다. 따라서 윈도우 프로그램에서 접근이 필요한 경우는 /mnt/ 아래에 등록되어야 할 것이며 이외의 파일은 vi 등을 이용하여 수정해야 할 것입니다.
 
 **윈도우를 좋아하신다면 꼭 설치해서 사용해보세요.**
