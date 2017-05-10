@@ -44,7 +44,7 @@ class Drink : Product
 {
     public override void SomeMethod()
     {
-        //...
+        
     }
 }
 ```
